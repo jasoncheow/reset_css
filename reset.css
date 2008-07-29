@@ -1,0 +1,77 @@
+/*---------------------------------------------------------------------------
+Resets browsers' default styles, smoothing out inconsistencies across 
+browsers.
+
+For sizing: 1.0em = 10px, 1.1em = 11px, and so on...
+Note that nested elements are affected by size of ancestors, i.e.:
+
+  div { font-size: 1.2em }
+  => 12px
+
+  div p { font-size: 0.9em }
+  => 12 * 0.9 = 10.8px
+
+Tables are rendered similar to when 'cellpadding="0" cellspacing="0"' is 
+used. If cellspacing is required, use:
+
+  border-collapse: separate;
+  border-spacing: 1px;
+
+However, as IE does not support the border-spacing property, the following 
+hack needs to be applied:
+
+  behavior: expression((this.runtimeStyle.behavior="none") && (this.cellSpacing=1));
+
+Adapted from: 
+http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded
+
+Last revised: 9 July 2008
+
+Copyright (c) 2008 Jason Cheow, under the MIT license
+---------------------------------------------------------------------------*/
+
+html, body, a, abbr, acronym, address, applet, big, blockquote, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+
+:focus {
+	outline: 0;
+}
+
+body {
+	font-weight: normal;
+	font-size: 10px;
+	*font-size: 62.5%;
+	line-height: 1;
+	font-family: arial, helvetica, sans-serif;
+	color: black;
+	background-color: white;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+address, em, h1, h2, h3, h4, h5, h6, strong, th {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.0em;
+}
+
+caption, th {
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input, select, textarea, button {
+	font-size: 1.0em;
+	font-family: arial, helvetica, sans-serif;
+}
