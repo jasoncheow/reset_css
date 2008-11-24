@@ -2,23 +2,14 @@
 Resets browsers' default styles, smoothing out inconsistencies across 
 browsers.
 
-For sizing: 1.0em = 10px, 1.1em = 11px, and so on...
-Note that nested elements are affected by size of ancestors, i.e.:
-
-  div { font-size: 1.2em }
-  => 12px
-
-  div p { font-size: 0.9em }
-  => 12 * 0.9 = 10.8px
-
-Tables are rendered similar to when 'cellpadding="0" cellspacing="0"' is 
-used. If cellspacing is required, use:
+Tables are rendered as if the attributes cellpadding="0" and cellspacing="0" 
+are applied. If cellspacing is required, use:
 
   border-collapse: separate;
   border-spacing: 1px;
 
-However, as IE does not support the border-spacing property, the following 
-hack needs to be applied:
+IE6 and IE7 do not support the border-spacing property, but the following 
+hack can be applied:
 
   behavior: expression((this.runtimeStyle.behavior="none") && (this.cellSpacing=1));
 
