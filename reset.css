@@ -56,6 +56,6 @@ table {
 }
 
 input, select, textarea, button {
-  font-size: 10px;
-  font-family: sans-serif;
+	font-size: 10px;
+	font-family: sans-serif;
 }
