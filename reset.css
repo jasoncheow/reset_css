@@ -13,8 +13,7 @@ hack can be applied:
 
   behavior: expression((this.runtimeStyle.behavior="none") && (this.cellSpacing=1));
 
-Adapted from: 
-http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded
+Adapted from: http://meyerweb.com/eric/tools/css/reset/
 
 Copyright (c) 2008 Jason Cheow, under the MIT license
 ---------------------------------------------------------------------------*/
@@ -24,19 +23,16 @@ html, body, a, abbr, acronym, address, applet, big, blockquote, caption, cite, c
 	padding: 0;
 	border: 0;
 	outline: 0;
+	font-size: 100%;
 	vertical-align: baseline;
-}
-
-:focus {
-	outline: 0;
+	background: transparent;
 }
 
 body {
-	font-weight: normal;
 	font-size: 10px;
 	*font-size: 62.5%;
+	font-family: sans-serif;
 	line-height: 1;
-	font-family: arial, helvetica, sans-serif;
 	color: black;
 	background-color: white;
 }
@@ -45,14 +41,13 @@ ol, ul {
 	list-style: none;
 }
 
-address, em, h1, h2, h3, h4, h5, h6, strong, th {
-	font-weight: normal;
-	font-style: normal;
-	font-size: 1.0em;
+blockquote, q {
+	quotes: none;
 }
 
-caption, th {
-	text-align: left;
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
 }
 
 table {
@@ -61,6 +56,6 @@ table {
 }
 
 input, select, textarea, button {
-	font-size: 1.0em;
-	font-family: arial, helvetica, sans-serif;
+  font-size: 10px;
+  font-family: sans-serif;
 }
