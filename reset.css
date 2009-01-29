@@ -59,3 +59,7 @@ input, select, textarea, button {
   font-size: 10px;
   font-family: sans-serif;
 }
+
+textarea {
+  margin: 0;
+}
