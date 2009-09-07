@@ -1,14 +1,14 @@
 /*---------------------------------------------------------------------------
-Resets browsers' default styles, smoothing out inconsistencies across 
+Resets browsers' default styles, smoothing out inconsistencies across
 browsers.
 
-Tables are rendered as if the attributes cellpadding="0" and cellspacing="0" 
+Tables are rendered as if the attributes cellpadding="0" and cellspacing="0"
 are applied. If cellspacing is required, use:
 
   border-collapse: separate;
   border-spacing: 1px;
 
-IE6 and IE7 do not support the border-spacing property, but the following 
+IE6 and IE7 do not support the border-spacing property, but the following
 hack can be applied:
 
   behavior: expression((this.runtimeStyle.behavior="none") && (this.cellSpacing=1));
